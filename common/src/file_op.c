@@ -33,7 +33,7 @@ int read_file(void *content, size_t *size, char *file, char *mode)
     if (len != file_size)
     {
         printf("read data missed,real:[%dByte],read:[%dByte]", file_size, len);
-        return -3;
+        return FREAD_FAILED;
     }
 
     fclose(fp);
